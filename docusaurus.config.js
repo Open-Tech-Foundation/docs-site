@@ -4,16 +4,20 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+const repoName = "";
+const pkgVer = ""; //require(`../packages/${repoName}/package.json`).version;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "My Site",
+  tagline: "Tagline.",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "open-tech-world", // Usually your GitHub org/user name.
+  projectName: repoName, // Usually your repo name.
 
   presets: [
     [
@@ -22,16 +26,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          sidebarCollapsed: false,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: `https://github.com/open-tech-world/${repoName}/tree/main/`,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -50,15 +49,19 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
+            label: "v" + pkgVer,
+            position: "right",
+            href: `https://www.npmjs.com/package/@open-tech-world/${repoName}`,
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            type: "doc",
+            docId: "Getting Started",
+            position: "left",
+            label: "Docs",
+          },
+          {
+            href: `https://github.com/open-tech-world/${repoName}`,
+            className: "header-github-link",
             position: "right",
           },
         ],
@@ -73,7 +76,7 @@ const config = {
             html: `📝 with <a href="https://docusaurus.io/">Docusaurus</a>`,
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Contributors of <a href="https://github.com/open-tech-world/">@open-tech-world/</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Contributors of <a href="https://github.com/open-tech-world/${repoName}">@open-tech-world/</a>`,
       },
       prism: {
         theme: lightCodeTheme,
