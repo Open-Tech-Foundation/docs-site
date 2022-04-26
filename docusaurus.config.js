@@ -76,7 +76,7 @@ const config = {
             html: `📝 with <a href="https://docusaurus.io/">Docusaurus</a>`,
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Contributors of <a href="https://github.com/open-tech-world/${repoName}">@open-tech-world/</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Contributors of <a href="https://github.com/open-tech-world/${repoName}">@open-tech-world/${repoName}</a>`,
       },
       prism: {
         theme: lightCodeTheme,
