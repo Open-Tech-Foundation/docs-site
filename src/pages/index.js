@@ -34,10 +34,12 @@ export default function Home() {
     >
       <HomepageHeader />
       <main>
-        <div className={styles.features}>
-          <h2>Features:</h2>
+      <div className={styles.features}>
+          <div className={styles.featuresText}>
+            <h3>FEATURES</h3>
+          </div>
           <ul>
-            <li>Simple APIs to use</li>
+            <li> ✔️ Simple API</li>
           </ul>
         </div>
       </main>
