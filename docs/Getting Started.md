@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+slug: getting-started
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,25 +13,39 @@ defaultValue="npm"
 values={[
 {label: 'npm', value: 'npm'},
 {label: 'Yarn', value: 'yarn'},
-]}>
+{label: 'Pnpm', value: 'pnpm'},
+{label: 'Bun', value: 'bun'}]}
+
+>
+
 <TabItem value="npm">
-
 ```shell
-npm install @open-tech-world/
+npm install @opentf/
 ```
-
 </TabItem>
-  <TabItem value="yarn">
 
+<TabItem value="yarn">
 ```shell
-yarn add @open-tech-world/
+yarn add @opentf/
 ```
+</TabItem>
 
-  </TabItem>
+<TabItem value="pnpm">
+```shell
+pnpm add @opentf/
+```
+</TabItem>
+
+<TabItem value="bun">
+```shell
+bun add @opentf/
+```
+</TabItem>
+
 </Tabs>
 
 ## Usage
 
 ```jsx
-import {} from "@open-tech-world/";
+import {} from "@opentf/";
 ```
