@@ -1,4 +1,4 @@
-# Docs Site
+# Docs Site Template
 
 > The docs website template based on [Docusaurus](https://docusaurus.io/) for the org libraries.
 
